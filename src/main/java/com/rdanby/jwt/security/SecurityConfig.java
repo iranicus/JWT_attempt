@@ -48,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .cors().and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .httpBasic().and() //optional, if the service wants to be accessed via the browser
+                // .httpBasic().and() //optional, if the service wants to be accessed via the browser
                 .authorizeRequests()
                     // endPoint configuration requiring authorization
                     .antMatchers("/signup").permitAll()
